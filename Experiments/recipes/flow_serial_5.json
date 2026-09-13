@@ -1,0 +1,14 @@
+{
+  "schema": "assemblygrid-recipe-v1",
+  "id": "flow_serial_5",
+  "raw_tokens": ["A"],
+  "operations": [
+    {"id": "prepare", "kind": "prepare", "inputs": ["A"], "output": "P1", "predecessors": [], "predecessor_any": [], "kappa": 1, "roles": ["operator"], "role_inputs": {"operator": "A"}, "duration": 2},
+    {"id": "process_1", "kind": "process", "inputs": ["P1"], "output": "P2", "predecessors": ["prepare"], "predecessor_any": [], "kappa": 1, "roles": ["operator"], "role_inputs": {"operator": "P1"}, "duration": 3},
+    {"id": "process_2", "kind": "process", "inputs": ["P2"], "output": "P3", "predecessors": ["process_1"], "predecessor_any": [], "kappa": 1, "roles": ["operator"], "role_inputs": {"operator": "P2"}, "duration": 3},
+    {"id": "finish", "kind": "finish", "inputs": ["P3"], "output": "P4", "predecessors": ["process_2"], "predecessor_any": [], "kappa": 1, "roles": ["operator"], "role_inputs": {"operator": "P3"}, "duration": 2},
+    {"id": "inspect", "kind": "inspect", "inputs": ["P4"], "output": "FINAL", "predecessors": ["finish"], "predecessor_any": [], "kappa": 1, "roles": ["inspector"], "role_inputs": {"inspector": "P4"}, "duration": 2}
+  ],
+  "final_token": "FINAL",
+  "product_value": 1.0
+}

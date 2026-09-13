@@ -1,0 +1,12 @@
+{
+  "schema": "assemblygrid-recipe-v1",
+  "id": "parallel_branch_light",
+  "raw_tokens": ["A", "B"],
+  "operations": [
+    {"id": "prepare_a", "kind": "prepare", "inputs": ["A"], "output": "PA", "predecessors": [], "predecessor_any": [], "kappa": 1, "roles": ["operator_a"], "role_inputs": {"operator_a": "A"}, "duration": 3, "productive_weight": 1.0},
+    {"id": "prepare_b", "kind": "prepare", "inputs": ["B"], "output": "PB", "predecessors": [], "predecessor_any": [], "kappa": 1, "roles": ["operator_b"], "role_inputs": {"operator_b": "B"}, "duration": 3, "productive_weight": 1.0},
+    {"id": "join_branches", "kind": "assemble", "inputs": ["PA", "PB"], "output": "FINAL", "predecessors": ["prepare_a", "prepare_b"], "predecessor_any": [], "kappa": 2, "roles": ["holder_PA", "holder_PB"], "role_inputs": {"holder_PA": "PA", "holder_PB": "PB"}, "duration": 4, "productive_weight": 1.5}
+  ],
+  "final_token": "FINAL",
+  "product_value": 1.0
+}

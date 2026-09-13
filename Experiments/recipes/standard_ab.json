@@ -1,0 +1,72 @@
+{
+  "schema": "assemblygrid-recipe-v1",
+  "id": "standard_ab",
+  "raw_tokens": [
+    "A",
+    "B"
+  ],
+  "operations": [
+    {
+      "id": "align_ab",
+      "kind": "align",
+      "inputs": [
+        "A",
+        "B"
+      ],
+      "output": "AB",
+      "predecessors": [],
+      "predecessor_any": [],
+      "kappa": 2,
+      "roles": [
+        "holder_A",
+        "holder_B"
+      ],
+      "role_inputs": {
+        "holder_A": "A",
+        "holder_B": "B"
+      },
+      "role_skills": {
+        "holder_A": "align",
+        "holder_B": "align"
+      },
+      "role_tools": {},
+      "resources": [],
+      "duration": 3,
+      "productive_weight": 1.0
+    },
+    {
+      "id": "final_assembly",
+      "kind": "assemble",
+      "inputs": [
+        "AB"
+      ],
+      "output": "FINAL",
+      "predecessors": [
+        "align_ab"
+      ],
+      "predecessor_any": [],
+      "kappa": 4,
+      "roles": [
+        "holder_AB",
+        "operator",
+        "stabilizer",
+        "support"
+      ],
+      "role_inputs": {
+        "holder_AB": "AB"
+      },
+      "role_skills": {
+        "holder_AB": "assemble",
+        "operator": "assemble",
+        "stabilizer": "assemble",
+        "support": "assemble"
+      },
+      "role_tools": {},
+      "resources": [],
+      "duration": 4,
+      "productive_weight": 1.2
+    }
+  ],
+  "final_token": "FINAL",
+  "product_value": 1.0
+}

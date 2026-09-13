@@ -1,0 +1,94 @@
+{
+  "schema": "assemblygrid-recipe-v1",
+  "id": "parallel_branch",
+  "raw_tokens": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "operations": [
+    {
+      "id": "align_ab",
+      "kind": "align",
+      "inputs": [
+        "A",
+        "B"
+      ],
+      "output": "AB",
+      "predecessors": [],
+      "predecessor_any": [],
+      "kappa": 2,
+      "roles": [
+        "holder_A",
+        "holder_B"
+      ],
+      "role_inputs": {
+        "holder_A": "A",
+        "holder_B": "B"
+      },
+      "role_skills": {},
+      "role_tools": {},
+      "resources": [],
+      "duration": 3,
+      "productive_weight": 1.0
+    },
+    {
+      "id": "align_cd",
+      "kind": "align",
+      "inputs": [
+        "C",
+        "D"
+      ],
+      "output": "CD",
+      "predecessors": [],
+      "predecessor_any": [],
+      "kappa": 2,
+      "roles": [
+        "holder_C",
+        "holder_D"
+      ],
+      "role_inputs": {
+        "holder_C": "C",
+        "holder_D": "D"
+      },
+      "role_skills": {},
+      "role_tools": {},
+      "resources": [],
+      "duration": 3,
+      "productive_weight": 1.0
+    },
+    {
+      "id": "join_branches",
+      "kind": "assemble",
+      "inputs": [
+        "AB",
+        "CD"
+      ],
+      "output": "FINAL",
+      "predecessors": [
+        "align_ab",
+        "align_cd"
+      ],
+      "predecessor_any": [],
+      "kappa": 4,
+      "roles": [
+        "holder_AB",
+        "holder_CD",
+        "operator",
+        "stabilizer"
+      ],
+      "role_inputs": {
+        "holder_AB": "AB",
+        "holder_CD": "CD"
+      },
+      "role_skills": {},
+      "role_tools": {},
+      "resources": [],
+      "duration": 5,
+      "productive_weight": 1.8
+    }
+  ],
+  "final_token": "FINAL",
+  "product_value": 1.0
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "assemblygrid-recipe-v1",
+  "id": "supported_insert",
+  "raw_tokens": [
+    "A",
+    "B"
+  ],
+  "operations": [
+    {
+      "id": "align_ab",
+      "kind": "align",
+      "inputs": [
+        "A",
+        "B"
+      ],
+      "output": "AB",
+      "predecessors": [],
+      "predecessor_any": [],
+      "kappa": 2,
+      "kappa_max": null,
+      "roles": [
+        "holder_A",
+        "holder_B"
+      ],
+      "role_inputs": {
+        "holder_A": "A",
+        "holder_B": "B"
+      },
+      "role_skills": {},
+      "role_tools": {},
+      "resources": [],
+      "duration": 3,
+      "productive_weight": 1.0
+    },
+    {
+      "id": "supported_insert",
+      "kind": "assemble",
+      "inputs": [
+        "AB"
+      ],
+      "output": "FINAL",
+      "predecessors": [
+        "align_ab"
+      ],
+      "predecessor_any": [],
+      "kappa": 2,
+      "kappa_max": 4,
+      "roles": [
+        "holder",
+        "inserter",
+        "stabilizer",
+        "inspector"
+      ],
+      "role_inputs": {
+        "holder": "AB"
+      },
+      "role_skills": {},
+      "role_tools": {},
+      "resources": [],
+      "duration": 4,
+      "productive_weight": 1.3
+    }
+  ],
+  "final_token": "FINAL",
+  "product_value": 1.0
+}

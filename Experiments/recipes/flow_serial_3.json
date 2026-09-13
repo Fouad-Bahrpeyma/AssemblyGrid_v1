@@ -1,0 +1,12 @@
+{
+  "schema": "assemblygrid-recipe-v1",
+  "id": "flow_serial_3",
+  "raw_tokens": ["A"],
+  "operations": [
+    {"id": "prepare", "kind": "prepare", "inputs": ["A"], "output": "P1", "predecessors": [], "predecessor_any": [], "kappa": 1, "roles": ["operator"], "role_inputs": {"operator": "A"}, "duration": 2},
+    {"id": "process", "kind": "process", "inputs": ["P1"], "output": "P2", "predecessors": ["prepare"], "predecessor_any": [], "kappa": 1, "roles": ["operator"], "role_inputs": {"operator": "P1"}, "duration": 3},
+    {"id": "inspect", "kind": "inspect", "inputs": ["P2"], "output": "FINAL", "predecessors": ["process"], "predecessor_any": [], "kappa": 1, "roles": ["inspector"], "role_inputs": {"inspector": "P2"}, "duration": 2}
+  ],
+  "final_token": "FINAL",
+  "product_value": 1.0
+}

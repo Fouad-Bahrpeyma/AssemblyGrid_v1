@@ -1,0 +1,35 @@
+{
+  "schema": "assemblygrid-recipe-v1",
+  "id": "solo_inspection",
+  "raw_tokens": [
+    "A"
+  ],
+  "operations": [
+    {
+      "id": "inspect",
+      "kind": "inspect",
+      "inputs": [
+        "A"
+      ],
+      "output": "FINAL",
+      "predecessors": [],
+      "predecessor_any": [],
+      "kappa": 1,
+      "roles": [
+        "inspector"
+      ],
+      "role_inputs": {
+        "inspector": "A"
+      },
+      "role_skills": {
+        "inspector": "inspect"
+      },
+      "role_tools": {},
+      "resources": [],
+      "duration": 2,
+      "productive_weight": 1.0
+    }
+  ],
+  "final_token": "FINAL",
+  "product_value": 1.0
+}
