@@ -4,6 +4,8 @@ title: "AssemblyGrid"
 type: software
 version: 1.0.0
 license: MIT
+repository-code: "https://github.com/Fouad-Bahrpeyma/AssemblyGrid_v1"
+doi: "10.5281/zenodo.22734115"
 authors:
   - family-names: "Bahrpeyma"
     given-names: "Fouad"
