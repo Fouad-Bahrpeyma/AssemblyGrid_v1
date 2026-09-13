@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:assemblygrid:schema:recipe:v1",
+  "title": "AssemblyGrid recipe v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "raw_tokens", "operations", "final_token"],
+  "properties": {
+    "schema": {"const": "assemblygrid-recipe-v1"},
+    "id": {"type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9_.-]+$"},
+    "raw_tokens": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "final_token": {"type": "string", "minLength": 1},
+    "product_value": {"type": "number", "exclusiveMinimum": 0},
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/operation"}
+    }
+  },
+  "$defs": {
+    "stringArray": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "inputs", "output", "kappa", "duration"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9_.-]+$"},
+        "kind": {"type": "string", "minLength": 1},
+        "inputs": {"$ref": "#/$defs/stringArray"},
+        "output": {"type": "string", "minLength": 1},
+        "predecessors": {"$ref": "#/$defs/stringArray"},
+        "predecessor_any": {"type": "array", "items": {"$ref": "#/$defs/stringArray"}},
+        "predecessor_any_inclusive": {"type": "array", "items": {"$ref": "#/$defs/stringArray"}},
+        "kappa": {"type": "integer", "minimum": 1, "maximum": 4},
+        "kappa_max": {"type": ["integer", "null"], "minimum": 1, "maximum": 4},
+        "roles": {"$ref": "#/$defs/stringArray"},
+        "role_inputs": {"type": "object", "additionalProperties": {"type": "string", "minLength": 1}},
+        "role_skills": {"type": "object", "additionalProperties": {"type": "string", "minLength": 1}},
+        "role_tools": {"type": "object", "additionalProperties": {"$ref": "#/$defs/stringArray"}},
+        "resources": {"$ref": "#/$defs/stringArray"},
+        "duration": {"type": "integer", "minimum": 1},
+        "productive_weight": {"type": "number", "exclusiveMinimum": 0}
+      }
+    }
+  }
+}

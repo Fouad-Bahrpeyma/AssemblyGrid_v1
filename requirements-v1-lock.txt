@@ -1,0 +1,7 @@
+# AssemblyGrid v1 CPU dependencies. Python 3.11.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==2.4.6
+torch==2.13.0+cpu
+gymnasium==1.3.0
+pettingzoo==1.27.0
+pytest==9.1.1

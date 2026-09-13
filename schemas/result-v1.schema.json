@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:assemblygrid:schema:result:v1",
+  "title": "AssemblyGrid result record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "benchmark",
+    "benchmark_version",
+    "instance",
+    "seeds",
+    "method",
+    "budget",
+    "fidelity",
+    "status",
+    "metrics"
+  ],
+  "properties": {
+    "schema": {
+      "const": "assemblygrid-result-v1"
+    },
+    "benchmark": {
+      "const": "AssemblyGrid"
+    },
+    "benchmark_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "instance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sha256",
+        "family",
+        "difficulty",
+        "episode_mode"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "family": {
+          "enum": [
+            "flow",
+            "coalition",
+            "concurrency",
+            "geometry"
+          ]
+        },
+        "difficulty": {
+          "enum": [
+            "easy",
+            "medium",
+            "hard"
+          ]
+        },
+        "episode_mode": {
+          "enum": [
+            "batch",
+            "horizon"
+          ]
+        }
+      }
+    },
+    "seeds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation",
+        "execution"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer"
+        },
+        "execution": {
+          "type": "integer"
+        },
+        "algorithm": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "method": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "execution_information",
+        "training_information"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution_information": {
+          "enum": [
+            "local",
+            "local_geometry",
+            "global"
+          ]
+        },
+        "training_information": {
+          "enum": [
+            "local",
+            "ctde",
+            "global",
+            "not_applicable"
+          ]
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "environment_steps",
+        "evaluation_episodes"
+      ],
+      "properties": {
+        "environment_steps": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evaluation_episodes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "fidelity": {
+      "enum": [
+        "abstract-v1",
+        "geometry-off-control",
+        "ur10-case-v1",
+        "ur10-kinematic-validation-v1"
+      ]
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "zero_delivery",
+        "timeout",
+        "failed",
+        "unavailable"
+      ]
+    },
+    "reward": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "delivered",
+        "completion_rate",
+        "unfinished_count",
+        "throughput",
+        "makespan",
+        "restricted_mean_flow_time",
+        "coalition_success_rate",
+        "coalition_formation_latency",
+        "geometry_rejection_count",
+        "geometry_conflict_count",
+        "geometry_delay_ticks"
+      ],
+      "properties": {
+        "delivered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "completion_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "unfinished_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "throughput": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "makespan": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "restricted_mean_flow_time": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "coalition_success_rate": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "coalition_formation_latency": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "geometry_rejection_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "geometry_conflict_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "legacy aggregate of blocked activities, any cause; alias of trajectory_conflicts"
+        },
+        "blocked_activity_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "activities blocked by a committed activity, any cause"
+        },
+        "geometry_block_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "blocked activities whose only cause is abstract workspace overlap"
+        },
+        "resource_block_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "blocked activities caused by an exclusive or exhausted finite-capacity resource"
+        },
+        "robot_block_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "blocked activities caused by a robot committed to another activity"
+        },
+        "geometry_delay_ticks": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

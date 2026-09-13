@@ -1,0 +1,39 @@
+{
+  "benchmark": "AssemblyGrid",
+  "version": "1.0.0",
+  "canonical_version_tag": "v1.0.0",
+  "license": "MIT",
+  "license_file": "LICENSE",
+  "copyright": "Copyright (c) 2026 Fouad Bahrpeyma",
+  "instance_schema": "assemblygrid-instance-v1",
+  "official_realization_schema": "assemblygrid-official-realizations-v4",
+  "official_scenarios": 9,
+  "official_families": [
+    "flow",
+    "coalition",
+    "concurrency"
+  ],
+  "canonical_geometry_profile": "abstract-v1",
+  "canonical_core": "Experiments/env",
+  "algorithm_support_interface": "Experiments/env/algorithm_support.py",
+  "reference_marl_implementations": "Experiments/env/marl",
+  "reference_training": "reference_training",
+  "authors": [
+    {
+      "name": "Fouad Bahrpeyma",
+      "email": "Bahrpeyma@ieee.org",
+      "affiliation": "Faculty of Computer Science/Mathematics, Dresden University of Applied Sciences (HTW Dresden), Dresden, Germany"
+    },
+    {
+      "name": "David Heik",
+      "email": "david.heik@htw-dresden.de",
+      "affiliation": "Faculty of Computer Science/Mathematics, Dresden University of Applied Sciences (HTW Dresden), Dresden, Germany"
+    },
+    {
+      "name": "Dirk Reichelt",
+      "email": "dirk.reichelt@htw-dresden.de",
+      "affiliation": "Faculty of Computer Science/Mathematics, Dresden University of Applied Sciences (HTW Dresden), Dresden, Germany"
+    }
+  ],
+  "official_catalogue": "official/official_realizations.json"
+}

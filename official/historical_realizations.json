@@ -1,0 +1,2278 @@
+{
+  "benchmark": "AssemblyGrid",
+  "historical_families": [
+    "geometry"
+  ],
+  "immutability_rule": "An official ID denotes exactly the instance_definition and instance_sha256. Generation/execution pairs and runtime configurations are frozen protocol metadata.",
+  "note": "Pre-v1 AAG032 geometry family. Traceability only; excluded from every AssemblyGrid v1 official aggregate.",
+  "realizations": [
+    {
+      "difficulty": "easy",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 7
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10000,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-low",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-easy-s00",
+      "instance_sha256": "fbd43924b202d4a3c54cbffcbc6e5689cf108bc941bc06acf2b44f62bcc9b65e",
+      "reference_execution_seed": 20000,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20000,
+        "formation_timeout": 3,
+        "generation_seed": 10000,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-low",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 7,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.12
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.12,
+        "level": "easy",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "medium",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 4,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10000,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-medium",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-medium-s00",
+      "instance_sha256": "fbf36fe4a16e705d0b710fdb0e209f85a07290f04a02d9750bfdf1ffae02f2c0",
+      "reference_execution_seed": 20000,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20000,
+        "formation_timeout": 3,
+        "generation_seed": 10000,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-medium",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 4,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.25
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.25,
+        "level": "medium",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.13333333333333333
+      }
+    },
+    {
+      "difficulty": "hard",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10000,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-high",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-hard-s00",
+      "instance_sha256": "439feb35902cbdd052978c9d3d278065d037da6be3cac25aa97cdf94eb4f266c",
+      "reference_execution_seed": 20000,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20000,
+        "formation_timeout": 3,
+        "generation_seed": 10000,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-high",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.4
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.4,
+        "level": "hard",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "easy",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 7
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10001,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-low",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-easy-s01",
+      "instance_sha256": "3eee014d3a814efc1d7423ac4ad4eb44574b0caba432401655f5a8b738dc853d",
+      "reference_execution_seed": 20001,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20001,
+        "formation_timeout": 3,
+        "generation_seed": 10001,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-low",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 7,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.12
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.12,
+        "level": "easy",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "medium",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 4,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10001,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-medium",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-medium-s01",
+      "instance_sha256": "43aaf2f6a3d96c8d652739700da330024f8f0a8b40e442c55b30c7d3ca87d641",
+      "reference_execution_seed": 20001,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20001,
+        "formation_timeout": 3,
+        "generation_seed": 10001,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-medium",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 4,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.25
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.25,
+        "level": "medium",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.13333333333333333
+      }
+    },
+    {
+      "difficulty": "hard",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10001,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-high",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-hard-s01",
+      "instance_sha256": "ed24d4107032d55ea58d3748db52c1349f086cf896a44912282b39315562f586",
+      "reference_execution_seed": 20001,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20001,
+        "formation_timeout": 3,
+        "generation_seed": 10001,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-high",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.4
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.4,
+        "level": "hard",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "easy",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 7
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10002,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-low",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-easy-s02",
+      "instance_sha256": "0d863ef7584976710fbb280fc59231468a147fe162d80df713911e175eb73b25",
+      "reference_execution_seed": 20002,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20002,
+        "formation_timeout": 3,
+        "generation_seed": 10002,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-low",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 7,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.12
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.12,
+        "level": "easy",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "medium",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 4,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10002,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-medium",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-medium-s02",
+      "instance_sha256": "9b400d1e8060e2e0a44fb3625fb6fce812caf3c663164030232e3ec3efab0963",
+      "reference_execution_seed": 20002,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20002,
+        "formation_timeout": 3,
+        "generation_seed": 10002,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-medium",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 4,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.25
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.25,
+        "level": "medium",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.13333333333333333
+      }
+    },
+    {
+      "difficulty": "hard",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10002,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-high",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-hard-s02",
+      "instance_sha256": "e130de647459870d755762a4366713f814202508fdde70b7a8d07e2e1e9c5412",
+      "reference_execution_seed": 20002,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20002,
+        "formation_timeout": 3,
+        "generation_seed": 10002,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-high",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.4
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.4,
+        "level": "hard",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "easy",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 7
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10003,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-low",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-easy-s03",
+      "instance_sha256": "2a01800196efcac5ef7f365cbe9bcd5391c07df90e6284b4536cb0f0a3c807ed",
+      "reference_execution_seed": 20003,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20003,
+        "formation_timeout": 3,
+        "generation_seed": 10003,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-low",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 7,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.12
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.12,
+        "level": "easy",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "medium",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 4,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10003,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-medium",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-medium-s03",
+      "instance_sha256": "5a40cf706f347503206dc80fcef04703e313f2e25c4df72de676cd2269168f3c",
+      "reference_execution_seed": 20003,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20003,
+        "formation_timeout": 3,
+        "generation_seed": 10003,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-medium",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 4,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.25
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.25,
+        "level": "medium",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.13333333333333333
+      }
+    },
+    {
+      "difficulty": "hard",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10003,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-high",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-hard-s03",
+      "instance_sha256": "d7fe51fd55ff3ee6fc0337c476be31637851ea7e28594d0e64c0ee30c97fdac9",
+      "reference_execution_seed": 20003,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20003,
+        "formation_timeout": 3,
+        "generation_seed": 10003,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-high",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.4
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.4,
+        "level": "hard",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "easy",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 7
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10004,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-low",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-easy-s04",
+      "instance_sha256": "cdda1225f5070d4d397721d0e806cc96db29371b2125529f9a7df012022a97ab",
+      "reference_execution_seed": 20004,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20004,
+        "formation_timeout": 3,
+        "generation_seed": 10004,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-low",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 7,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.12
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.12,
+        "level": "easy",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    },
+    {
+      "difficulty": "medium",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 4,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10004,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-medium",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-medium-s04",
+      "instance_sha256": "5aacf1dbd27edf42c91a4b38ed57ad6bc41a87ea8f5d8929ba5a9991a38a512d",
+      "reference_execution_seed": 20004,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20004,
+        "formation_timeout": 3,
+        "generation_seed": 10004,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-medium",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 4,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.25
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.25,
+        "level": "medium",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.13333333333333333
+      }
+    },
+    {
+      "difficulty": "hard",
+      "family": "geometry",
+      "instance_definition": {
+        "cooperation": {
+          "commitment_horizon": 1,
+          "formation_timeout": 3,
+          "require_bilateral_handoff": true
+        },
+        "demand": {
+          "max_wip": 3,
+          "spawn_interval": 5
+        },
+        "evaluation_mode": {
+          "batch_Z": 30,
+          "episode_mode": "horizon",
+          "horizon_T": 400
+        },
+        "generation_seed": 10004,
+        "information": {
+          "proposal_support_visible": true
+        },
+        "material_resources": {
+          "product_mass_max": 2.0,
+          "product_mass_min": 0.5,
+          "reach_extra_prob": 0.3,
+          "resource_capacities": {},
+          "shelf_cap": 6,
+          "shelf_replenish_interval": 5
+        },
+        "process": {
+          "recipe_ids": [
+            "supported_insert"
+          ]
+        },
+        "robot_population": {
+          "assignment": "homogeneous",
+          "count": 30,
+          "model_source": "geometry_profile"
+        },
+        "schema": "assemblygrid-instance-v1",
+        "spatial": {
+          "M": 5,
+          "N": 6,
+          "cooperation_radius": 1,
+          "geometry_profile": "abstract-v1",
+          "geometry_variant": "conflict-high",
+          "reference_reach": 1.5,
+          "reference_time": 1.0,
+          "role_target_offset": 0.12,
+          "topology": "moore"
+        },
+        "timing": {
+          "deliver_duration": 2,
+          "handoff_duration": 1,
+          "pick_duration": 2
+        }
+      },
+      "instance_id": "ag32-geometry-hard-s04",
+      "instance_sha256": "216d757c17c63466c4f3b159b47084584821229276ae0e98a21aec4bef5b86c8",
+      "reference_execution_seed": 20004,
+      "reference_run_configuration": {
+        "M": 5,
+        "N": 6,
+        "allow_inclusive_or_extension": false,
+        "batch_Z": 30,
+        "benchmark_track": "AG-Core",
+        "cell_spacing": 1.0,
+        "commitment_horizon": 1,
+        "cooperation_radius": 1,
+        "deliver_duration": 2,
+        "due_slack": 2.2,
+        "due_slack_jitter": 0.5,
+        "duration_noise": 0.0,
+        "episode_mode": "horizon",
+        "execution_seed": 20004,
+        "formation_timeout": 3,
+        "generation_seed": 10004,
+        "geometry_profile": "abstract-v1",
+        "geometry_variant": "conflict-high",
+        "handoff_duration": 1,
+        "handoff_failure_prob": 0.0,
+        "held_out_axes": [],
+        "horizon_T": 400,
+        "max_wip": 3,
+        "motion_planning": true,
+        "official_result": true,
+        "operation_failure_prob": 0.0,
+        "parallelism_exact_candidate_limit": 64,
+        "parallelism_exact_combination_limit": 100000,
+        "parallelism_exact_product_limit": 6,
+        "physical_reference_reach_m": null,
+        "pick_duration": 2,
+        "product_mass_max": 2.0,
+        "product_mass_min": 0.5,
+        "profile_enforced": true,
+        "proposal_support_visible": true,
+        "reach_extra_prob": 0.3,
+        "recipe_ids": [
+          "supported_insert"
+        ],
+        "reference_reach": 1.5,
+        "reference_time": 1.0,
+        "repair_duration": 8,
+        "require_bilateral_handoff": true,
+        "resource_capacities": {},
+        "retreat_fraction": 0.25,
+        "robot_failure_prob": 0.0,
+        "robot_model_assignment": "homogeneous",
+        "robot_models": [
+          {
+            "clearance": 0.1,
+            "joint_speed": 1.0,
+            "name": "generic_ur",
+            "payload": 10.0,
+            "reach_radius": 1.5,
+            "speed": 1.0,
+            "tools": [
+              "gripper"
+            ]
+          }
+        ],
+        "role_target_offset": 0.12,
+        "seed": null,
+        "shelf_cap": 6,
+        "shelf_replenish_interval": 5,
+        "skill_initial_level": 0.75,
+        "skill_learning_rate": 0.05,
+        "skill_mode": "disabled",
+        "skill_threshold": 0.5,
+        "spawn_interval": 5,
+        "stockout_prob": 0.0,
+        "topology": "moore",
+        "trajectory_conflicts": true,
+        "workspace_conflict_radius": 0.4
+      },
+      "structural_difficulty": {
+        "alternative_group_count": 0,
+        "basis": "predeclared geometry-stress structure (conflict radius plus the published release/WIP settings); use matched_geometry_control_suite() for a causal conflict-radius-only control",
+        "coalition_operation_fraction": 1.0,
+        "comparison_scope": "within_family",
+        "geometric_conflict_ratio": 0.4,
+        "level": "hard",
+        "maximum_required_arity": 2,
+        "nominal_critical_path": 7,
+        "parallel_width_proxy": 1,
+        "recipe_operation_count": 2,
+        "spacing_to_reach": 0.6666666666666666,
+        "wip_per_robot": 0.1
+      }
+    }
+  ],
+  "schema": "assemblygrid-official-realizations-v4",
+  "suite": "assemblygrid-aag032-rc1",
+  "version": "v1.0.0"
+}
