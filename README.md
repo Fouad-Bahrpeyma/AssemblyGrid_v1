@@ -52,7 +52,31 @@ Use `AssemblyGridCore` for direct simulation or `AssemblyGridParallelEnv` in `pe
 - `Experiments/env/audits.py`: release audits for action-space addressability and
   coalition-formation sanity (`python Experiments/env/audits.py`).
 
-Citation metadata is provided in `CITATION.cff`.
+## Citation
+
+If you use AssemblyGrid v1 in your research, experiments, or derived work, please cite the accompanying paper:
+
+> Fouad Bahrpeyma, David Heik, and Dirk Reichelt.  
+> **AssemblyGrid v1: A Benchmark for Multi-Robot Production with Temporary Coalitions, Local Information, and Geometric Constraints.**  
+> arXiv preprint arXiv:2609.16075, 2026.  
+> [AssemblyGrid v1: A Benchmark for Multi-Robot Production with Temporary Coalitions, Local Information, and Geometric Constraints](https://doi.org/10.48550/arXiv.2609.16075)
+
+### BibTeX
+
+```bibtex
+@article{bahrpeyma2026assemblygrid,
+  title   = {AssemblyGrid v1: A Benchmark for Multi-Robot Production with Temporary Coalitions, Local Information, and Geometric Constraints},
+  author  = {Bahrpeyma, Fouad and Heik, David and Reichelt, Dirk},
+  journal = {arXiv preprint arXiv:2609.16075},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2609.16075},
+  url     = {https://arxiv.org/abs/2609.16075}
+}
+```
+
+We appreciate citations to the paper when AssemblyGrid v1 is used as a benchmark, experimental environment, or basis for further development.
+
+Citation metadata for this GitHub repository and its associated software release is provided in `CITATION.cff`.
 
 ## License
 
