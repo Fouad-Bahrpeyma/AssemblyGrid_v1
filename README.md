@@ -13,14 +13,6 @@ AssemblyGrid is a benchmark for multi-robot production with recipe-driven materi
 The official suite contains nine scenarios: Flow, Coalition and Concurrency, each with easy, medium and hard configurations. The geometry profile is `abstract-v1`. Task success and benchmark metrics are independent of the controller's training reward.
 
 
-<p align="center">
-  <img src="docs/media/AssemblyGrid_9Scenarios_3x3_PANELS_1440p_HQ.webm" width="100%" alt="AssemblyGrid v1 - scenarios">
-</p>
-
-<p align="center">
-  <img src="docs/media/AssemblyGrid_9Scenarios_ONE_PANEL_1440p_HQ.webm" width="100%" alt="AssemblyGrid v1 - scenarios all">
-</p>
-
 ## Install
 
 Use Python 3.11 in a virtual environment:
