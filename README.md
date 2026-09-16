@@ -1,5 +1,13 @@
 # AssemblyGrid v1
 
+<p align="center">
+  <img src="docs/media/assemblygrid_overview.webp" width="100%" alt="AssemblyGrid multi-robot production animation">
+</p>
+
+<p align="center">
+  <img src="docs/media/assemblygrid_handoff.webp" width="100%" alt="AssemblyGrid multi-robot handoff and assembly animation">
+</p>
+
 AssemblyGrid is a benchmark for multi-robot production with recipe-driven material flow, temporary robot coalitions, local observations, and task-level geometric constraints.
 
 The official suite contains nine scenarios: Flow, Coalition and Concurrency, each with easy, medium and hard configurations. The geometry profile is `abstract-v1`. Task success and benchmark metrics are independent of the controller's training reward.
