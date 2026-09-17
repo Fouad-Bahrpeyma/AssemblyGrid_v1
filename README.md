@@ -3,10 +3,12 @@
 <p align="center">
   <img src="docs/media/assemblygrid_overview.webp" width="100%" alt="AssemblyGrid multi-robot production animation">
 </p>
+<p align="left"><sub>AssemblyGrid v1, copyright (c) 2026 Fouad Bahrpeyma</sub></p>
 
 <p align="center">
   <img src="docs/media/assemblygrid_handoff.webp" width="100%" alt="AssemblyGrid multi-robot handoff and assembly animation">
 </p>
+<p align="left"><sub>AssemblyGrid v1, copyright (c) 2026 Fouad Bahrpeyma</sub></p>
 
 AssemblyGrid is a benchmark for multi-robot production with recipe-driven material flow, temporary robot coalitions, local observations, and task-level geometric constraints.
 
@@ -18,6 +20,7 @@ The official suite contains nine scenarios: Flow, Coalition and Concurrency, eac
     width="100%"
     alt="AssemblyGrid v1 - Flow, Concurrency and Coalition scenarios at easy, medium and hard difficulty">
 </p>
+<p align="left"><sub>AssemblyGrid v1, copyright (c) 2026 Fouad Bahrpeyma</sub></p>
 
 <p align="center">
   <img
@@ -25,6 +28,7 @@ The official suite contains nine scenarios: Flow, Coalition and Concurrency, eac
     width="100%"
     alt="AssemblyGrid v1 - all nine scenarios in one shared environment">
 </p>
+<p align="left"><sub>AssemblyGrid v1, copyright (c) 2026 Fouad Bahrpeyma</sub></p>
 
 ## Install
 
@@ -105,4 +109,3 @@ Citation metadata for this GitHub repository and its associated software release
 Released under the MIT License, Copyright (c) 2026 Fouad Bahrpeyma. See `LICENSE`.
 
 The release history is recorded in `CHANGELOG.md`.
-
