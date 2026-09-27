@@ -6,6 +6,8 @@ The official benchmark suite contains nine scenarios across three scenario famil
 
 Task success and benchmark metrics are defined independently of the controller's training reward, allowing different learning, optimization, heuristic, and rule-based control approaches to be evaluated within the same benchmark formulation.
 
+**Official website:** [AssemblyGrid v1](https://assemblygridv1.vercel.app/)
+
 ## Resources
 
 - **Paper:** [AssemblyGrid v1: A Benchmark for Multi-Robot Production with Temporary Coalitions, Local Information, and Geometric Constraints](https://arxiv.org/abs/2609.16075)
